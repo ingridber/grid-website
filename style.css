@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'coco';
+    src: url('Fonts/CocoBiker\ Regular\ Trial.woff2') format('woff2'),
+        url('Fonts/CocoBiker\ Regular\ Trial.woff') format('woff'),
+        url('Fonts/CocoBiker\ Regular\ Trial.ttf') format('truetype');
+}
+
+
+/*
+font-family: 'Abril Fatface', cursive;
+font-family: 'Roboto Slab', serif;
+
+#9BC4CB - light blue
+#E9A699 - pastel pink
+#FFC914 - sunglow
+#2E282A - raisin black
+#29335C - space cadet
+#F7F6EF - Baby Powder
+#EDECE8 - Isabelline
+*/
+
+body {
+    background-color: #EDECE8;
+}
+
+main {
+    width: 100%;
+}
+
+.container-main-grid {
+    width: 85vw;
+    height: 45vw;
+    margin: 0 auto 0 auto;
+    display: grid;
+    grid-template: repeat(18, 0.5fr) / repeat(34, 0.5fr);
+}
+
+/* ------------------ HEADER ------------------ */
+.lilla {
+    grid-area: 1 / 1 / 4 / 35;
+    padding-top: 1vw;
+}
+
+.lady {
+    grid-area: 2 / 1 / 5 / 35;
+    padding-top: 1vw;
+}
+
+.lilla h1, .lady h1 {
+    width: 100%;
+    color: #2E282A;
+    font-family: 'coco';
+    font-size: 3.5vw;
+    font-weight: 900;
+    letter-spacing: 0.7vw; 
+    text-shadow: 0.1vw 0 #2E282A, -0.1vw 0 #2E282A, 0 0.1vw #2E282A, 0 -0.1vw #2E282A, 0.1vw 0.1vw #2E282A,
+    0.1vw -0.1vw rgb(46, 40, 42), -0.1vw 0.1vw #2E282A, -0.1vw -0.1vw #2E282A, -0.1vw -0.045vw #2E282A,0.1vw 0.045vw #2E282A, 0.1vw -0.06vw #2E282A, -0.1vw 0.06vw #2E282A, 
+    -0.3vw 0.3vw rgba(46, 40, 42, 0.3);
+    padding-left: 3vw;
+}
+
+.lady h1 {
+    border-bottom: 0.1vw solid #2E282A;
+    padding-top: 1vw;
+}
+
+/* ------------------ PIC ------------------ */
+.pic {
+    grid-area: 6 / 13 / 16 / 23;
+    z-index: 1;
+    border: 0.3vw dashed #2E282A;
+    box-shadow: -0.4vw 0.4vw rgba(46, 40, 42, 0.3);
+}
+
+img {
+    width: 100%;
+    filter: hue-rotate(200deg) sepia(0.20);
+}
+
+/*
+img:hover {
+    transform: scaleX(-1);
+}*/
+
+
+/* ------------------ NAV ------------------*/
+nav {
+    grid-area: 11 / 22 / 15 / 25;
+    background-color: #F7F6EF;
+    z-index: 2;
+    border: 0.3vw solid #2E282A;
+    box-shadow: -0.4vw 0.4vw rgba(46, 40, 42, 0.3);    
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 1vw;
+    padding-top: 0.8vw;
+}
+
+nav li a {
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.2vw;
+    line-height: 2.5vw;
+    color: #2E282A;
+    font-weight: 500;
+    text-shadow: 0.1vw 0.1vw rgba(46, 40, 42, 0.2);
+    transition: color 175ms ease-in-out;
+    transition: font-weight 100ms linear;
+}
+
+nav li a:hover {
+    font-weight: 900;
+    font-size: 1.3vw;
+    text-shadow: 0.1vw 0.1vw rgba(46, 40, 42, 1);
+}
+
+nav li .about:hover {
+    color: #E9A699;
+}
+
+nav li .resume:hover {
+    color: #9BC4CB;
+}
+
+nav li .artsy:hover {
+    color: #FFC914;
+}
+
+
+
+
+
+ /* ------------------ CIRCLES ------------------ */
+.circle-1, .circle-2, .circle-3, .circle-4, .circle-5, 
+.circle-6, .circle-7, .circle-8, .circle-9, .circle-10, .circle-11 { 
+    border-radius: 50%;
+}
+
+.circle-1 {
+    grid-area: 6 / 7 / 9 / 10;
+    background-color: #29335C;
+    border: 1.2vw inset;
+    transition: background-color 150ms linear;
+    transition: transform 150ms linear;
+}
+
+.circle-1:hover {
+    background-color: #E9A699;
+    transform: rotate(180deg);
+}
+
+.circle-2 {
+    grid-area: 5 / 20 / 10 / 25;
+    background-color: #FFC914;
+    border: 0.7vw double #2E282A;
+    transition: background-color 150ms linear;
+    transition: border 150ms linear;
+    transition: transform 150ms linear;
+}
+
+.circle-2:hover {
+    background-color: #E9A699;
+    border: 0.7vw dashed #2E282A;
+    transform: rotate(300deg);
+    
+}
+
+.circle-3 {
+    grid-area: 6 / 29 / 8 / 31;
+    background-color: #E9A699;
+    border: 0.15vw dashed #2E282A;
+    transition: background-color 100ms linear;
+}
+
+.circle-3:hover {
+    background-color: #29335C;
+}
+
+.circle-4 {
+    grid-area: 8 / 9 / 14 / 15;
+    background-color: #9BC4CB;
+    filter: drop-shadow(-0.6vw -0.3vw rgba(232, 166, 153, 0.5));
+    transition: background-color 200ms linear;
+    transition: filter 200ms linear;
+    transition: transform 150ms linear;
+}
+
+.circle-4:hover {
+    background-color: #29335C;
+    filter: drop-shadow(-0.6vw -0.3vw #9BC4CB);
+    transform: rotate(-90deg);
+}
+
+.circle-5 {
+    grid-area: 9 / 26 / 12 / 29;
+    background-color: #9BC4CB;
+    border: 1.2vw outset;
+    transition: transform 150ms linear;
+}
+
+.circle-5:hover {
+    transform: rotate(-90deg);
+}
+
+.circle-6 {
+    grid-area: 14 / 5 / 17 / 8;
+    background-color: #FFC914;
+    border: 0.15vw dashed #2E282A;
+    transition: background-color 100ms linear;
+}
+
+.circle-6:hover {
+    background-color: #29335C;
+}
+
+.circle-7 {
+    grid-area: 14 / 14 / 19 / 19;
+    background-color: #E9A699;
+    border: 0.7vw double #2E282A;
+    transition: background-color 150ms linear;
+    transition: border 150ms linear;
+    transition: transform 150ms linear;
+}
+
+.circle-7:hover {
+    background-color: #FFC914;
+    border: 0.7vw dashed #2E282A;
+    transform: rotate(300deg);
+}
+
+.circle-8 {
+    grid-area: 12 / 21 / 18 / 27;
+    background-color: #29335C;
+    filter: drop-shadow(0.4vw 0.4vw rgba(155, 196, 203, 0.5));
+    transition: background-color 150ms linear;
+    transition: filter 150ms linear;
+    transition: transform 150ms linear;
+}
+
+.circle-8:hover {
+    background-color: #FFC914;
+    filter: drop-shadow(0.4vw 0.4vw #29335C);
+    transform: rotate(-90deg);
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+.container-footer-grid {
+    width: 85vw;
+    height: 10vw;
+    margin: 0 auto 0 auto;
+    display: grid;
+    grid-template: repeat(4, 0.5fr) / repeat(34, 0.5fr);  
+}
+
+.contact {
+    grid-area: 1 / 1 / 3 / 35;
+    border-top: 0.1vw solid #2E282A;
+    margin-top: 1.5vh;
+    padding-top: 1.8vw;
+    align-self: center;
+    word-spacing: 5.5vw;
+}
+.contact i {
+    font-size: 2.2vw;
+    color: #2E282A;
+    text-shadow: -0.15vw 0.1vw rgba(46, 40, 42, 0.3);
+    transition: color 220ms ease-out;
+    transition: transform 200ms linear;
+}
+
+.contact i:hover {
+    transform: scale(1.1);
+    text-shadow: -0.15vw 0.1vw rgba(46, 40, 42, 1);
+}
+
+.fa-at:hover, .fa-linkedin-in:hover {
+    color: #FFC914;
+}
+.fa-facebook-messenger:hover, .fa-facebook-f:hover {
+    color: #9BC4CB;
+}
+.fa-instagram:hover {
+    color: #E9A699;
+}
+
+.fa-facebook-f {
+    padding-left: 0.25vw;
+}
+
+.fa-linkedin-in {
+    padding: 0 0.5vw 0 0.25vw;
+}
+
+
+.copy {
+    grid-area: 4 / 1 / 5 / 35;
+    align-self: start;
+}
+
+.copy p {
+    font-size: 0.7vw;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 200;
+    color: rgba(46, 40, 42, 0.5);
+}
